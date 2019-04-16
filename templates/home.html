@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap4/dist/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='font-awesome-4.7.0/css/font-awesome.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" method="POST">
+          {{ form.csrf }}
+        <div class="row justify-content-center">
+          <h2>Motor de Passo - Configurações <i class="fa fa-home"></i></h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="input text">
+                {{ form.portas.label }} {{ form.portas }}
+              </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <h1>Passo</h1>
+            
+           
+              <div class="input text">
+                  {{ form.passo.label }} {{ form.passo }}</div>
+            <input type="submit" name="submit" value="Passo Girar" class="btn btn-primary">
+        
+          </div>
+          <div class="col-4">
+            <h1>Angulo</h1>
+            
+         
+              <div class="input text">
+                  {{ form.angulo.label }} {{ form.angulo }}</div>
+            <input type="submit" name="submit" value="Angulo Girar" class="btn btn-primary">
+  
+          </div>
+          
+          <div class="col-4">
+            <h1>Opções</h1>
+            <div class="row">
+            
+            
+            <input type="submit" name="submit" value="Home" class="btn btn-primary">
+      
+          
+            <input type="submit" name="submit" value="Calibrar" class="btn btn-info">
+        
+          </div>
+          </div>
+        </div>
+        </form>
+</div>
+    <script src="{{ url_for('static', filename='bootstrap4/dist/js/bootstrap.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='bootstrap4/js/src/util.js') }}"></script> -->
+    <!-- <script src="{{ url_for('static', filename='bootstrap4/js/src/popover.js') }}"></script> -->
+  </body>
+</html>
