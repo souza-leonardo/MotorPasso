@@ -3,7 +3,6 @@ from wtforms import Form, TextField, TextAreaField, validators, StringField, Sub
 import sys
 import time
 import serial.tools.list_ports
-import keyboard
 from serial import Serial
 from flask_bootstrap import Bootstrap
 
